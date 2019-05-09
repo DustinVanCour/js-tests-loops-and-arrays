@@ -7,8 +7,6 @@ function loopSyntax() {
         //key to while loops is to modify the data that impacts the condition
         count--
     }
-
-
     return true
 }
 
@@ -74,7 +72,7 @@ function findById(id) {
             break
         }
     }
-    retun out
+    return out
 }
 
 
