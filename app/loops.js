@@ -4,6 +4,7 @@ function loopSyntax() {
 
     let count = 100000000
     while (count >= 0) {
+        //key to while loops is to modify the data that impacts the condition
         count--
     }
 
@@ -15,13 +16,17 @@ function loopSyntax() {
 // ------------------------------------------
 
 
-// 2. Write a function that sums up all of the numbers in a range
+// 2. Write a function that sums up all of the numbers in a range (inclusive)
 // Example:
 // input: 2, 6
 // output: 20
 
 function rangeTotal(n1, n2) {
-    for (let i =  )
+    let sumTotal = 0
+    for (let num = n1; num <= 2; num++) {
+        sunTotal += Num
+    }
+    return sumTotal
 }
 
 
@@ -36,6 +41,13 @@ function rangeTotal(n1, n2) {
 // Truthy Reference: https://developer.mozilla.org/en-US/docs/Glossary/Truthy
 
 function truthyExtractor(obj) {
+    let newObject = {}
+    for (let prop in obj) {
+        if (obj[prop]) {
+            newObject[prop] = obj[prop]
+        }
+    }
+    return newObject
 }
 
 
@@ -54,6 +66,15 @@ function truthyExtractor(obj) {
 let staff = [{ id: 1, name: 'Jon' }, { id: 2, name: 'Yuli' }, { id: 21, name: 'Peter' }, { id: 17, name: 'St. MaryLou de la Playa Carmen' }, { id: 51, name: 'Doug' }, { id: 881, name: 'Paul' }, { id: 0, name: 'Jon' }, { id: 999, name: 'Timma' }]
 
 function findById(id) {
+    let out = {} //{ error: "No user with that id." }
+    for (let i = 0; i < staff.length; i++) {
+        let emp = staff[i]
+        if (id == emp.id) {
+            out = emp
+            break
+        }
+    }
+    retun out
 }
 
 
@@ -80,4 +101,13 @@ let theBand = {
 }
 
 function bandMemberDetails(name) {
+    let out = ''
+    for (let i = 0; i < theBand.members.length; i++) {
+        let bandMem = theBand.members[i]
+        if (name == bandMem.name) {
+            out = bandMem.name = " is in the band and plays the " + bandMem.instrument
+            break
+        }
+    }
+    return out
 }
